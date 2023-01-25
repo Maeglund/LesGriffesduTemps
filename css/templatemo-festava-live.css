@@ -469,6 +469,17 @@ strong {
   top: 8px;
 }
 
+@font-face {
+  font-family: 'Germanika';
+  src: url(../fonts/germanika.woff2) format('woff2');
+}
+
+.text-title {
+  color: var(--white-color);
+  font-size: var(--h1-font-size);
+  font-family: 'Germanika';
+  font-weight: var(--font-weight-bold);
+}
 
 /*---------------------------------------
   HERO        
