@@ -493,7 +493,6 @@ strong {
 
 .hero-section small {
   color: var(--white-color);
-  text-transform: uppercase;
 }
 
 .hero-section .section-overlay {
@@ -512,6 +511,52 @@ strong {
   height: 100%;
 }
 
+.light-text {
+  font-weight: lighter;
+}
+
+/*---------------------------------------
+  FIRE SECTION        
+-----------------------------------------*/
+.fire-section {
+  position: relative;
+  overflow: hidden;
+  padding-top: 100px;
+  background-color: black;
+}
+
+.fire-section .gallery {
+  display: flex;
+  justify-content: space-around; /* This will add some space between images */
+  flex-wrap: wrap; /* This will allow images to wrap to the next line if the width is too small */
+}
+
+.fire-section .gallery-item {
+  flex: 0 0 auto; /* This will prevent images from shrinking and will keep them at their original size */
+  margin: 10px; /* This will add some margin around images */
+}
+
+.fire-section .gallery-item img {
+  width: 250px; /* This will set the width of images */
+  height: 250px; /* This will set the height of images */
+  object-fit: cover; /* This will ensure images cover the entire space of their container */
+  cursor: pointer; /* This will change the cursor to a pointer when hovering over images */
+  border-radius: 20px; 
+}
+
+.fire-section .modal-dialog {
+  max-width: 80%; /* This will set the maximum width of the modal */
+}
+
+.fire-section .modal-content {
+  background-color: transparent; /* This will make the background of the modal transparent */
+}
+
+.fire-section .modal-body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 
 /*---------------------------------------
   ABOUT              
@@ -597,6 +642,15 @@ strong {
 /*---------------------------------------
   ARTISTS              
 -----------------------------------------*/
+
+.artists-section {
+  background-color: black;
+}
+
+.artists-section h2 {
+  color: white;
+}
+
 .artists-thumb {
   position: relative;
   overflow: hidden;
@@ -605,8 +659,10 @@ strong {
 
 .artists-image {
   border-radius: var(--border-radius-medium);
-  display: block;
-  width: 100%;
+  width: 600px;
+  height: 600px;
+  object-fit: cover;
+  margin-bottom: 10px;
 }
 
 .artists-thumb:hover .artists-hover {
@@ -649,6 +705,7 @@ strong {
 .artists-hover hr {
   margin: 1.5rem 0;
 }
+
 
 
 /*---------------------------------------
@@ -794,13 +851,64 @@ strong {
   color: var(--link-hover-color);
 }
 
-
+.square-image {
+  width: 200px;
+  height: 200px;
+  object-fit: cover;
+  margin-bottom: 10px;
+}
 /*---------------------------------------
   CONTACT               
 -----------------------------------------*/
 .google-map {
   border-radius: var(--border-radius-medium);
 }
+
+.contact-section {
+  background-color: black;
+  color: white;
+}
+
+.contact-section h2 {
+  color: white;
+}
+
+.contact-form input[type="text"],
+.contact-form input[type="email"],
+.contact-form textarea {
+  background-color:white;
+  color: white;
+}
+
+.contact-form .form-control:focus,
+.contact-form .custom-form input[type="date"]:focus,
+.contact-form .custom-form input[type="time"]:focus {
+  background-color: white;
+}
+
+.contact-form .custom-form input[type="date"]::-webkit-calendar-picker-indicator,
+.contact-form .custom-form input[type="time"]::-webkit-calendar-picker-indicator {
+  filter: invert(100%) sepia(0%) saturate(7500%) hue-rotate(335deg) brightness(102%) contrast(102%);
+  background-color: white;
+}
+
+.contact-form .form-control:focus {
+  background-color: var(--secondary-color);
+}
+
+.contact-form .custom-form input::placeholder,
+.contact-form .custom-form textarea::placeholder {
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.google-map {
+  border: 0;
+}
+
+.google-map iframe {
+  filter: grayscale(100%);
+}
+
 
 
 /*---------------------------------------
